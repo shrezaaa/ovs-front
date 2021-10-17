@@ -13,6 +13,11 @@ const routes: Routes = [
         path: 'home',
         component: MainPageComponent,
       },
+      {
+        path: 'profile',
+        loadChildren: () =>
+          import('./../profile/profile.module').then((m) => m.ProfileModule),
+      },
       // {
       //   path: 'ReTasker',
       //   loadChildren: () =>
