@@ -7,7 +7,7 @@
     >
       <button
         [routerLink]="item?.route"
-        [routerLinkActive]=''
+        [routerLinkActive]=""
         id="nav-item"
         mat-button
         [disableRipple]="true"
@@ -51,8 +51,11 @@
         </span>
       </button>
       <div [style.left.px]="navItemsPos[7]?.left" class="nav-subitem">
-        <a [routerLink]="">
+        <a [routerLink]="'profile/login'">
           <button class="nav-subitem-item">Login</button>
+        </a>
+        <a [routerLink]="">
+          <button class="nav-subitem-item">Shopping Basket</button>
         </a>
       </div>
     </a>

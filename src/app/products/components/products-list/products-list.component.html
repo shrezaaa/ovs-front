@@ -8,20 +8,20 @@
   >
     <div class="content-card">
       <div class="content-card-image">
-        <img [slpImageSource]="element.ImageURL" />
+        <img [slpImageSource]="element.imageFile.originalSizeUrl" />
       </div>
       <div class="content-card-info d-flex flex-column">
         <div class="content-card-info-headline">
           <h3 class="m-0">
             <strong>
-              {{ element.ProductName }}
+              {{ element.title }}
             </strong>
           </h3>
           <h4>
-            {{element.ProductDescription}}
+            {{element.desc}}
           </h4>
           <p class="mt-2">
-            {{element.Price|currency}}
+            {{element.price|currency}}
           </p>
         </div>
 
