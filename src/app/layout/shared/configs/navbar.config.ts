@@ -4,90 +4,65 @@ export const NAVBAR_CONFIG: NavbarConfig = {
   public: [
     {
       title:'Home',
-      route:''
+      route:'home',
+      id:'home'
     },
     {
-      title: "Today's Deals",
-      route: 'Todays-Deals',
-      id: '',
+      title: "All Products",
+      route: 'store/products',
+      id: 'store',
     },
     {
       title: 'Electronics',
       route: 'Electronics',
-      id: ''
-    },
-    {
-      title: 'Fashion',
-      route: 'Fashion',
-      id: ''
+      id: '1'
     },
     {
       title: 'Health & Beauty',
       route: 'Health & Beauty',
-      id: ''
+      id: '3'
     },
     {
       title: 'Home & Garden',
       route: 'Home & Garden',
-      id: ''
+      id: '4'
     },
     {
       title: 'Sports',
       route: 'Sports',
-      id: ''
+      id: '5'
     },
     {
-      title: 'Products',
-      id: 'Products',
-      subItem: [
-        {
-          title: 'Electronics',
-          route: 'Electronics',
-        },
-        {
-          title: 'Fashion',
-          route: 'Fashion',
-        },
-        {
-          title: 'Health & Beauty',
-          route: 'Health & Beauty',
-        },
-        {
-          title: 'Home & Garden',
-          route: 'Home & Garden',
-        },
-        {
-          title: 'Sports',
-          route: 'Sports',
-        },
-      ],
+      title: 'Users',
+      route: 'store/users',
+      id: 'store/users'
     },
-    {
-      title: 'Sell',
-      id: 'sell',
-      subItem: [
-        {
-          title: 'Census Data',
-          route: 'research/census',
-        },
-        {
-          title: 'Population Report',
-          route: 'research/population-report',
-        },
-      ],
-    },
-    {
-      title: 'About Us',
-      id: '',
-      subItem: [
-        {
-          title: 'People',
-        },
-        {
-          title: 'Firm’s History',
-        },
-      ],
-    },
+    // {
+    //   title: 'Sell',
+    //   id: 'sell',
+    //   subItem: [
+    //     {
+    //       title: 'Census Data',
+    //       route: 'research/census',
+    //     },
+    //     {
+    //       title: 'Population Report',
+    //       route: 'research/population-report',
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: 'About Us',
+    //   id: '',
+    //   subItem: [
+    //     {
+    //       title: 'People',
+    //     },
+    //     {
+    //       title: 'Firm’s History',
+    //     },
+    //   ],
+    // },
   ],
   customer: [
     {

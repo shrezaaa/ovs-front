@@ -7,6 +7,7 @@
     >
       <button
         [routerLink]="item?.route"
+        [routerLinkActive]=""
         id="nav-item"
         mat-button
         [disableRipple]="true"
@@ -36,6 +37,29 @@
         </ng-container>
       </div>
     </a>
+
+    <a (mouseover)="setItemPos()">
+      <button
+        id="nav-item"
+        mat-button
+        [disableRipple]="true"
+        class="nav-btns-item"
+      >
+        <span>
+          Profile
+          <mat-icon class="nav-btns-item-icon">expand_more</mat-icon>
+        </span>
+      </button>
+      <div [style.left.px]="navItemsPos[7]?.left" class="nav-subitem">
+        <a [routerLink]="'profile/login'">
+          <button class="nav-subitem-item">Login</button>
+        </a>
+        <a [routerLink]="'store/basket'">
+          <button class="nav-subitem-item">Shopping Basket</button>
+        </a>
+      </div>
+    </a>
+
     <!-- <ng-container *ngIf="(userService.User | async)?.UserKindID === 1">
       <a (mouseover)="setItemPos()">
         <button
@@ -62,8 +86,8 @@
           </ng-container>
         </div>
       </a>
-    </ng-container>
-    <ng-container *ngIf="!(userService.isLoggedIn | async)">
+    </ng-container> -->
+    <!-- <ng-container *ngIf="!(userService.isLoggedIn | async)">
       <a (mouseover)="setItemPos()">
         <button
           id="nav-item"
@@ -76,8 +100,8 @@
           <div *ngIf="currentRoute == 'profile'" class="nav-btns-line"></div>
         </button>
       </a>
-    </ng-container>
-    <ng-container *ngIf="userService.isLoggedIn | async">
+    </ng-container> -->
+    <!-- <ng-container *ngIf="userService.isLoggedIn | async">
       <a (mouseover)="setItemPos()">
         <button
           id="nav-item"

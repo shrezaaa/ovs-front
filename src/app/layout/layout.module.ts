@@ -11,8 +11,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { CarouselItemComponent } from './components/main-page/carousel-item/carousel-item.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { MatCardModule } from '@angular/material/card';
 
-const MAT_MODULES = [MatButtonModule, MatIconModule, MatMenuModule];
+const MAT_MODULES = [
+  MatButtonModule,
+  MatIconModule,
+  MatMenuModule,
+  MatCardModule,
+];
 
 @NgModule({
   declarations: [

@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="header">
+    <h4 class="text-bold">Your Basket</h4>
+    <section></section>
+  </div>
+  <div class="divider"></div>
+
+  <div *ngFor="let element of dataSource" class="col-12 pt-2 pm-2">
+    <div class="content-card">
+      <div class="content-card-image">
+        <img [slpImageSource]="element.imageFile.originalSizeUrl" />
+      </div>
+      <div class="content-card-info d-flex flex-column">
+        <div class="content-card-info-headline">
+          <h3 class="m-0">
+            <strong>
+              {{ element.title }}
+            </strong>
+          </h3>
+          <h4>
+            {{ element.desc }}
+          </h4>
+          <p class="mt-2">
+            {{ element.price | currency }}
+          </p>
+        </div>
+
+        <div class="mt-auto content-card-info-action">
+          <button
+            mat-icon-button
+            class="content-card-info-action-btn"
+            (click)="element.count = element.count - 1"
+          >
+            <mat-icon> remove </mat-icon>
+          </button>
+          {{ element.count }}
+          <button
+            mat-icon-button
+            class="content-card-info-action-btn"
+            (click)="element.count = element.count + 1"
+          >
+            <mat-icon> add </mat-icon>
+          </button>
+
+          <button mat-icon-button class="content-card-info-action-btn">
+            <mat-icon> delete </mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

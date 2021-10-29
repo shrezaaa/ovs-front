@@ -9,8 +9,8 @@ import { UserService } from "src/app/core/services/user.service";
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup = this.fb.group({
-    username: [''],
-    password: [''],
+    UserName: [''],
+    Password: [''],
   });
   constructor(private fb: FormBuilder, private userService: UserService) {}
 
