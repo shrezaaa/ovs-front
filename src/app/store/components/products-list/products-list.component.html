@@ -1,38 +1,72 @@
 <div class="container">
-  
-</div>
-<div class="content row px-4">
-  <div
-    *ngFor="let element of dataSource"
-    class=" col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 pt-2 pm-2"
-  >
-    <div class="content-card">
-      <div class="content-card-image">
-        <img [slpImageSource]="element.imageFile.originalSizeUrl" />
-      </div>
-      <div class="content-card-info d-flex flex-column">
-        <div class="content-card-info-headline">
-          <h3 class="m-0">
-            <strong>
-              {{ element.title }}
-            </strong>
-          </h3>
-          <h4>
-            {{element.desc}}
-          </h4>
-          <p class="mt-2">
-            {{element.price|currency}}
-          </p>
-        </div>
+  <!-- <div class="header">
+    <h4 class="text-bold">Products</h4>
+    <section></section>
+  </div>
+  <div class="divider"></div> -->
 
-        <div class="mt-auto content-card-info-action">
-          <button
-            mat-icon-button
-            class="content-card-info-action-btn"
-            matTooltip="Add to Card"
-          >
-            <mat-icon> add </mat-icon>
-          </button>
+  <h4 class="text-bold">Search Filters</h4>
+  <form [formGroup]="form">
+    <div class="flex-container">
+      <mat-form-field class="flex-50 padding-x-5" appearance="outline">
+        <mat-label>Search by Name</mat-label>
+        <input matInput type="text" formControlName="title" />
+        <button
+          *ngIf="form.value.title"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="form.get('title').setValue(null)"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="flex-50 d-flex flex-column padding-x-5">
+        <label>Price Sort:</label>
+        <mat-radio-group class="w-100 mt-1" aria-label="Price Sorting" formControlName='sort'>
+          <mat-radio-button [value]="null">All</mat-radio-button>
+          <mat-radio-button value="Asc">Ascending</mat-radio-button>
+          <mat-radio-button value="Dsc">Descending</mat-radio-button>
+        </mat-radio-group>
+      </div>
+    </div>
+  </form>
+
+  <div class="divider"></div>
+
+  <div class="content row px-4">
+    <div
+      *ngFor="let element of dataSource"
+      class="col-xl-4 col-lg-6 col-md-6 col-12 pt-2 pm-2"
+    >
+      <div class="content-card">
+        <div class="content-card-image">
+          <img [slpImageSource]="element.imageFile.originalSizeUrl" />
+        </div>
+        <div class="content-card-info d-flex flex-column">
+          <div class="content-card-info-headline">
+            <h3 class="m-0">
+              <strong>
+                {{ element.title }}
+              </strong>
+            </h3>
+            <h4>
+              {{ element.desc }}
+            </h4>
+            <p class="mt-2">
+              {{ element.price | currency }}
+            </p>
+          </div>
+
+          <div class="mt-auto content-card-info-action">
+            <button
+              mat-icon-button
+              class="content-card-info-action-btn"
+              matTooltip="Add to Card"
+            >
+              <mat-icon> add </mat-icon>
+            </button>
+          </div>
         </div>
       </div>
     </div>

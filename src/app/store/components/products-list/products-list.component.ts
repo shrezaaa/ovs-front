@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-products-list',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products-list.component.scss'],
 })
 export class ProductsListComponent implements OnInit {
-  constructor() {}
+  form = this.fb.group({
+    title: '',
+    sort: null,
+    BRAND: 'IGNORE',
+  });
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
 
@@ -44,7 +50,7 @@ export class ProductsListComponent implements OnInit {
   ];
 }
 
-interface product {
+export interface product {
   imageFile: {
     originalSizeUrl;
   };
@@ -52,4 +58,7 @@ interface product {
   brand;
   desc;
   price;
+  count?;
+  color?;
+  isActive?;
 }

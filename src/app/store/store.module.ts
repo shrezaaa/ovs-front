@@ -11,12 +11,20 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { StoreRoutingComponent } from './components/store-routing/store-routing.component';
 import { UsersComponent } from './components/users/users.component';
 import { ShoppongBasketComponent } from './components/shoppong-basket/shoppong-basket.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
 
 const MATMODULES = [
   MatIconModule,
   MatButtonModule,
   MatCardModule,
   MatTooltipModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatRadioModule
 ];
 @NgModule({
   declarations: [StoreRoutingComponent, ProductsListComponent,UsersComponent, ShoppongBasketComponent],
