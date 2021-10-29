@@ -26,7 +26,7 @@ const routes: Routes = [
       {
         path: 'products',
         loadChildren: () =>
-          import('./../products/products.module').then((m) => m.ProductsModule),
+          import('./../store/store.module').then((m) => m.StoreModule),
       },
       // {
       //   path: 'ReTasker',

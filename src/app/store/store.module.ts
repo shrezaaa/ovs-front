@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductsRoutingComponent } from './components/products-routing/products-routing.component';
-import { ProducsRoutingModule } from './producs.routing';
+import { StoreRoutingModule } from './store.routing';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -9,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { StoreRoutingComponent } from './components/store-routing/store-routing.component';
 
 const MATMODULES = [
   MatIconModule,
@@ -18,16 +18,16 @@ const MATMODULES = [
 ];
 @NgModule({
   declarations: [
-    ProductsRoutingComponent,
+    StoreRoutingComponent,
     ProductsListComponent,
   ],
   imports: [
     CommonModule,
-    ProducsRoutingModule,
+    StoreRoutingModule,
     ...MATMODULES,
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
   ],
 })
-export class ProductsModule {}
+export class StoreModule {}

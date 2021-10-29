@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductsRoutingComponent } from './products-routing.component';
+import { StoreRoutingComponent } from './store-routing.component';
 
-describe('ProductsRoutingComponent', () => {
-  let component: ProductsRoutingComponent;
-  let fixture: ComponentFixture<ProductsRoutingComponent>;
+describe('StoreRoutingComponent', () => {
+  let component: StoreRoutingComponent;
+  let fixture: ComponentFixture<StoreRoutingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductsRoutingComponent ]
+      declarations: [ StoreRoutingComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProductsRoutingComponent);
+    fixture = TestBed.createComponent(StoreRoutingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
