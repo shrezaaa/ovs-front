@@ -1,3 +1,8 @@
 export const environment = {
-  production: true
+  production: false,
+  baseUrl: '',
+  serviceBaseUrl: '',
+  imageBaseUrl: '',
+  pdfBaseUrl: '',
+  APP_NAME: 'OVS - Store',
 };
