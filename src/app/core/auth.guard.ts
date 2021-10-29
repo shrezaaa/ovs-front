@@ -30,9 +30,9 @@ export class AuthGuard implements CanActivate, HttpInterceptor {
         (event: HttpEvent<any>) => {},
         (err: any) => {
           if (err instanceof HttpErrorResponse) {
-            if (this.router.url !== "/auth/login" && err.status === 401) {
+            if (this.router.url !== "/profile/login" && err.status === 401) {
               localStorage.removeItem("Token");
-              this.router.navigate(["/auth/login"]);
+              this.router.navigate(["/profile/login"]);
             }
             this.errorHandler.handleError(err);
           }
@@ -48,7 +48,7 @@ export class AuthGuard implements CanActivate, HttpInterceptor {
     if (Token) {
       return true;
     }
-    this.router.navigate(["/auth/login"]);
+    this.router.navigate(["/profile/login"]);
     return false;
   }
 }
