@@ -1,1 +1,40 @@
-<p>products-list works!</p>
+<div class="container">
+  
+</div>
+<div class="content row px-4">
+  <div
+    *ngFor="let element of dataSource"
+    class=" col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 pt-2 pm-2"
+  >
+    <div class="content-card">
+      <div class="content-card-image">
+        <img [slpImageSource]="element.ImageURL" />
+      </div>
+      <div class="content-card-info d-flex flex-column">
+        <div class="content-card-info-headline">
+          <h3 class="m-0">
+            <strong>
+              {{ element.ProductName }}
+            </strong>
+          </h3>
+          <h4>
+            {{element.ProductDescription}}
+          </h4>
+          <p class="mt-2">
+            {{element.Price|currency}}
+          </p>
+        </div>
+
+        <div class="mt-auto content-card-info-action">
+          <button
+            mat-icon-button
+            class="content-card-info-action-btn"
+            matTooltip="Add to Card"
+          >
+            <mat-icon> add </mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

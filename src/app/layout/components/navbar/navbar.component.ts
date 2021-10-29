@@ -16,11 +16,11 @@ export class NavbarComponent implements OnInit {
   navItemsPos: any[] = [];
 
   constructor(private userService: UserService, private router: Router) {
-    // router.events.subscribe((res) => {
-    //   if (res instanceof NavigationEnd) {
-    //     this.currentRoute = res.url.split('/')[1];
-    //   }
-    // });
+    router.events.subscribe((res) => {
+      if (res instanceof NavigationEnd) {
+        this.currentRoute = res.url.split('/')[1];
+      }
+    });
     // this.checkToken();
   }
 

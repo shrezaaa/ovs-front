@@ -18,6 +18,11 @@ const routes: Routes = [
         loadChildren: () =>
           import('./../profile/profile.module').then((m) => m.ProfileModule),
       },
+      {
+        path: 'products',
+        loadChildren: () =>
+          import('./../products/products.module').then((m) => m.ProductsModule),
+      },
       // {
       //   path: 'ReTasker',
       //   loadChildren: () =>
