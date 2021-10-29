@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { StoreRoutingComponent } from './components/store-routing/store-routing.component';
+import { UsersComponent } from './components/users/users.component';
+import { ShoppongBasketComponent } from './components/shoppong-basket/shoppong-basket.component';
 
 const MATMODULES = [
   MatIconModule,
@@ -17,10 +19,7 @@ const MATMODULES = [
   MatTooltipModule,
 ];
 @NgModule({
-  declarations: [
-    StoreRoutingComponent,
-    ProductsListComponent,
-  ],
+  declarations: [StoreRoutingComponent, ProductsListComponent,UsersComponent, ShoppongBasketComponent],
   imports: [
     CommonModule,
     StoreRoutingModule,

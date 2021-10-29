@@ -9,8 +9,8 @@ export const NAVBAR_CONFIG: NavbarConfig = {
     },
     {
       title: "All Products",
-      route: 'products',
-      id: 'products',
+      route: 'store/products',
+      id: 'store',
     },
     {
       title: 'Electronics',
@@ -34,8 +34,8 @@ export const NAVBAR_CONFIG: NavbarConfig = {
     },
     {
       title: 'Users',
-      route: 'users',
-      id: 'users'
+      route: 'store/users',
+      id: 'store/users'
     },
     // {
     //   title: 'Sell',

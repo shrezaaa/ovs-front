@@ -11,7 +11,6 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { CarouselItemComponent } from './components/main-page/carousel-item/carousel-item.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { UsersComponent } from './components/users/users.component';
 import { MatCardModule } from '@angular/material/card';
 
 const MAT_MODULES = [
@@ -27,7 +26,6 @@ const MAT_MODULES = [
     NavbarComponent,
     MainPageComponent,
     CarouselItemComponent,
-    UsersComponent,
   ],
   imports: [
     CommonModule,

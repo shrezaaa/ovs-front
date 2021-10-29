@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { StoreRoutingComponent } from './components/store-routing/store-routing.component';
+import { UsersComponent } from './components/users/users.component';
 
 const routes: Routes = [
   {
@@ -9,12 +10,8 @@ const routes: Routes = [
     component: StoreRoutingComponent,
     children: [
       // { path: '', redirectTo: '', pathMatch: 'full' },
-      { path: '', component: ProductsListComponent },
-      // {
-      //   path: 'ReTasker',
-      //   loadChildren: () =>
-      //     import('../re-tasker/re-tasker.module').then((m) => m.ReTaskerModule),
-      // },
+      { path: 'products', component: ProductsListComponent },
+      { path: 'users', component: UsersComponent },
     ],
   },
 ];
