@@ -6,11 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent implements OnInit {
-  users: Array<User> = [
+  users: Array<any> = [
     {
-      userName: 'User x',
-      fname: 'Ali',
-      lname: 'Niosh Afrini',
+      userName: 'shrezaaa',
+      FName: 'reza',
+      LName: 'shakeri',
+      gender: 'MALE',
+      phoneNo: +989226410968,
+      password: 1234,
+      roleKind: 'CUSTOMER',
+      orders: null,
+    },
+    {
+      userName: 'trustyAlireza',
+      FName: 'alireza',
+      LName: 'bayat',
+      gender: 'MALE',
+      phoneNo: +989023452277,
+      password: 1234,
+      roleKind: 'ADMIN',
+      orders: null,
     },
   ];
   constructor() {}
@@ -20,6 +35,11 @@ export class UsersComponent implements OnInit {
 
 interface User {
   userName;
-  fname;
-  lname;
+  FName;
+  LName;
+  gender;
+  phoneNo;
+  password;
+  roleKind;
+  orders;
 }

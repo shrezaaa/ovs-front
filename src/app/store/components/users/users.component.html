@@ -5,16 +5,22 @@
   </div>
   <div class="divider"></div>
 
-  <mat-card *ngFor="let item of users">
+  <mat-card class="m-3" *ngFor="let item of users">
     <mat-card-title class="m-0">
       <div class="d-flex flex-row w-100">
-        <p class="m-0">{{ item.fname }} {{ item.lname }}</p>
+        <p class="m-0">{{ item.FName }} {{ item.Lname }}</p>
         <button class="ml-auto" mat-button>
           Remove<mat-icon>delete</mat-icon>
         </button>
       </div>
     </mat-card-title>
     <mat-card-subtitle>{{ item.userName }}</mat-card-subtitle>
-    <mat-card-content> User Info </mat-card-content>
+    <mat-card-content>
+      <p>Role: {{ item.roleKind }}</p>
+      <p>
+        Phone Number:
+        {{ item.phoneNo }}
+      </p>
+    </mat-card-content>
   </mat-card>
 </div>

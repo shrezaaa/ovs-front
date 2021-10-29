@@ -43,18 +43,18 @@ export class UserService {
   ) {}
 
   login(model) {
-    // this.http.post(`${environment.baseUrl}login`, model).subscribe(
-    //   ({ data, success }: any) => {
-    //     this.initUserData(data, success);
-    //   },
-    //   (error) => {
-    //     this.toaster.open({
-    //       caption: 'Error ...',
-    //       text: error.error.messages[0],
-    //       type: 'danger',
-    //     });
-    //   }
-    // );
+    this.http.post(`${environment.baseUrl}login`, model).subscribe(
+      ({ data }: any) => {
+        this.initUserData(data);
+      },
+      (error) => {
+        this.toaster.open({
+          caption: 'Error ...',
+          text: error.error.messages[0],
+          type: 'danger',
+        });
+      }
+    );
   }
 
   signup(model) {
@@ -69,55 +69,13 @@ export class UserService {
     //   .call(this.globalService);
   }
 
-  initUserData(data, success) {
-    // if (success) {
-    //   // let currentUser = new User(data.User);
-    //   localStorage.setItem('Token', currentUser.GUID);
-    //   localStorage.setItem('User', JSON.stringify(currentUser));
-    //   this.loggedIn = true;
-    //   console.log(currentUser)
-    //   this._currentUser$.next(currentUser);
-    //   this.router.navigate(['/']);
-    // } else {
-    //   // this.toaster.open({
-    //   //   caption: 'Error ...',
-    //   //   text: 'Invalid Username and / or Password.',
-    //   //   type: 'danger',
-    //   // });
-    // }
-  }
-
-  logout() {
-    // this.toaster.open({
-    //   caption: 'Logout',
-    //   text: 'Logout successful !',
-    //   type: 'success',
-    // });
-    // this.router.navigate(['/']);
-    // localStorage.removeItem('Token');
-    // localStorage.removeItem('User');
-    // this.loggedIn = false;
-    // this._currentUser$.next({});
-  }
-
-  verifyEmail(Token) {
-    // return ApiRequest('POST', true)
-    //   .setBaseUrl(environment.baseUrl)
-    //   .controller('user')
-    //   .action('verifyemail')
-    //   .setBodyModel({ EmailVerificationGUID: Token })
-    //   .call(this.globalService);
-  }
-
-  bidderRegistration(model) {
-    // // model['CustomerID'] = this.activeUser.UserID;     // -- it was null!
-    // let user = JSON.parse(localStorage.getItem('User'))
-    // model['CustomerID'] = user.UserID;
-    // return ApiRequest('POST', true)
-    //   .setBaseUrl(environment.baseUrl)
-    //   .controller('user')
-    //   .action('bidderregistration')
-    //   .addBodies(model)
-    //   .call(this.globalService);
+  initUserData(data?, success?) {
+      let currentUser = data.User;
+      localStorage.setItem('Token', currentUser.GUID);
+      localStorage.setItem('User', JSON.stringify(currentUser));
+      this.loggedIn = true;
+      console.log(currentUser);
+      this._currentUser$.next(currentUser);
+      this.router.navigate(['/']);
   }
 }

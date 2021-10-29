@@ -34,8 +34,8 @@ export const NAVBAR_CONFIG: NavbarConfig = {
     },
     {
       title: 'Users',
-      route: 'store/users',
-      id: 'store/users'
+      route: 'users',
+      id: 'users'
     },
     // {
     //   title: 'Sell',

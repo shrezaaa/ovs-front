@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { StoreService } from '../../store.service';
 
 @Component({
   selector: 'app-products-list',
@@ -12,9 +13,13 @@ export class ProductsListComponent implements OnInit {
     sort: null,
     BRAND: 'IGNORE',
   });
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private storeService: StoreService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.storeService.getProducts({}).subscribe((value: any) => {
+      this.dataSource = value.result;
+    });
+  }
 
   dataSource: Array<product> = [
     {
@@ -26,6 +31,7 @@ export class ProductsListComponent implements OnInit {
       desc: 'Apple Inc new Phone',
       price: '12000',
       brand: 'Apple',
+      count: 1,
     },
     {
       imageFile: {
@@ -36,6 +42,7 @@ export class ProductsListComponent implements OnInit {
       desc: 'Apple Inc new Phone',
       price: '1000',
       brand: 'Apple',
+      count: 1,
     },
     {
       imageFile: {
@@ -46,6 +53,7 @@ export class ProductsListComponent implements OnInit {
       desc: 'Apple Inc new Phone',
       price: '1000',
       brand: 'Apple',
+      count: 1,
     },
   ];
 }

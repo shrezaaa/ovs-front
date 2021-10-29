@@ -7,6 +7,7 @@ import { product } from '../products-list/products-list.component';
   styleUrls: ['./shoppong-basket.component.scss'],
 })
 export class ShoppongBasketComponent implements OnInit {
+  
   constructor() {}
 
   ngOnInit(): void {}

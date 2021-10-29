@@ -209,7 +209,9 @@ export class RequestBuilder {
     const token = globalService.token;
     const hdrs = new HttpHeaders({
       'Content-Type': 'application/json',
-      Authorization: `${localStorage.getItem('Token')}`,
+      // 'Access-Control-Allow-Origin': '*',
+      // 'Access-Control-Allow-Credentials': 'true',
+      // Authorization: `${localStorage.getItem('Token')}`,
     });
     if (this.loading) {
       globalService.startLoading();

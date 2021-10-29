@@ -33,6 +33,6 @@ export class UserProfileComponent implements OnInit {
   ngOnInit(): void {}
 
   onLogout() {
-    this.userService.logout();
+    // this.userService.logout();
   }
 }
